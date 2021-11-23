@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 17:26:32 by hgicquel          #+#    #+#             */
-/*   Updated: 2021/11/23 15:36:57 by hgicquel         ###   ########.fr       */
+/*   Updated: 2021/11/23 15:46:13 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,7 @@ int		ft_memcmp(unsigned char *a, unsigned char *b, size_t n);
 size_t	ft_strlcpy(char *dst, char *src, size_t l);
 
 size_t	ft_strlcat(char *dst, char *src, size_t l);
+
+char	*ft_strnstr(char *haystack, char *needle, size_t l);
 
 #endif

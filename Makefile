@@ -20,6 +20,7 @@ COMMON = \
 	strings/ft_strchr.c \
 	strings/ft_strrchr.c \
 	strings/ft_strncmp.c \
+	strings/ft_strnstr.c \
 
 OCOMMON = ${COMMON:.c=.o}
 

@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 17:26:32 by hgicquel          #+#    #+#             */
-/*   Updated: 2021/11/23 13:58:34 by hgicquel         ###   ########.fr       */
+/*   Updated: 2021/11/23 14:42:56 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdio.h>
 # include <stdlib.h>
+# include <string.h>
 
 int		ft_isalpha(int c);
 
@@ -37,5 +38,7 @@ void	*ft_memcpy(char *dst, char *src, size_t l);
 void	*ft_memmove(char *dst, char *src, size_t l);
 
 size_t	ft_strlcpy(char *dst, char *src, size_t l);
+
+size_t	ft_strlcat(char *dst, char *src, size_t l);
 
 #endif

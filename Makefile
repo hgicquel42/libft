@@ -12,6 +12,7 @@ COMMON = \
 	memory/ft_memmove.c \
 	strings/ft_strlen.c \
 	strings/ft_strlcpy.c \
+	strings/ft_strlcat.c \
 
 OCOMMON = ${COMMON:.c=.o}
 

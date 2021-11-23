@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 17:26:32 by hgicquel          #+#    #+#             */
-/*   Updated: 2021/11/23 15:15:19 by hgicquel         ###   ########.fr       */
+/*   Updated: 2021/11/23 15:36:57 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,10 @@ void	*ft_memset(char *b, char c, size_t l);
 void	*ft_memcpy(char *dst, char *src, size_t l);
 
 void	*ft_memmove(char *dst, char *src, size_t l);
+
+void	*ft_memchr(unsigned char *s, int c, size_t n);
+
+int		ft_memcmp(unsigned char *a, unsigned char *b, size_t n);
 
 size_t	ft_strlcpy(char *dst, char *src, size_t l);
 

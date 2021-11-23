@@ -14,6 +14,8 @@ COMMON = \
 	memory/ft_memmove.c \
 	memory/ft_memchr.c \
 	memory/ft_memcmp.c \
+	memory/ft_calloc.c \
+	memory/ft_strdup.c \
 	strings/ft_strlen.c \
 	strings/ft_strlcpy.c \
 	strings/ft_strlcat.c \

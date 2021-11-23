@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 17:26:32 by hgicquel          #+#    #+#             */
-/*   Updated: 2021/11/23 17:01:06 by hgicquel         ###   ########.fr       */
+/*   Updated: 2021/11/23 17:13:39 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,9 @@ void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(char *src);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+char	*ft_strjoin(char *a, char *b);
+
+char	*ft_strtrim(char *s, char *set);
 
 #endif

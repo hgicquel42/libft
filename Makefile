@@ -25,6 +25,8 @@ COMMON = \
 	strings/ft_strnstr.c \
 	strings/ft_atoi.c \
 	strings/ft_substr.c \
+	strings/ft_strjoin.c \
+	strings/ft_strtrim.c \
 
 OCOMMON = ${COMMON:.c=.o}
 

@@ -24,6 +24,7 @@ COMMON = \
 	strings/ft_strncmp.c \
 	strings/ft_strnstr.c \
 	strings/ft_atoi.c \
+	strings/ft_substr.c \
 
 OCOMMON = ${COMMON:.c=.o}
 

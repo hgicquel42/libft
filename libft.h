@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 17:26:32 by hgicquel          #+#    #+#             */
-/*   Updated: 2021/11/23 16:41:46 by hgicquel         ###   ########.fr       */
+/*   Updated: 2021/11/23 17:01:06 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,7 @@ int		ft_atoi(char *s);
 void	*ft_calloc(size_t count, size_t size);
 
 char	*ft_strdup(char *src);
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif

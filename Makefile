@@ -6,6 +6,8 @@ COMMON = \
 	chars/ft_isalpha.c \
 	chars/ft_isascii.c \
 	chars/ft_isprint.c \
+	chars/ft_toupper.c \
+	chars/ft_tolower.c \
 	memory/ft_bzero.c \
 	memory/ft_memcpy.c \
 	memory/ft_memset.c \
@@ -13,6 +15,9 @@ COMMON = \
 	strings/ft_strlen.c \
 	strings/ft_strlcpy.c \
 	strings/ft_strlcat.c \
+	strings/ft_strchr.c \
+	strings/ft_strrchr.c \
+	strings/ft_strncmp.c \
 
 OCOMMON = ${COMMON:.c=.o}
 

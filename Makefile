@@ -9,6 +9,7 @@ COMMON = \
 	memory/ft_bzero.c \
 	memory/ft_memcpy.c \
 	memory/ft_memset.c \
+	memory/ft_memmove.c \
 	strings/ft_strlen.c \
 
 OCOMMON = ${COMMON:.c=.o}

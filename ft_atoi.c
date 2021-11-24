@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 15:55:03 by hgicquel          #+#    #+#             */
-/*   Updated: 2021/11/23 16:33:48 by hgicquel         ###   ########.fr       */
+/*   Updated: 2021/11/24 11:20:19 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,15 @@ static	int	ft_isspace(char c)
 
 int	ft_atoi(char *s)
 {
-	size_t	i;
-	int		n;
-	int		r;
+	size_t		i;
+	int			n;
+	int			r;
 
 	i = 0;
 	while (ft_isspace(s[i]))
 		i++;
 	n = 1;
-	while (s[i] == '+' || s[i] == '-')
+	if (s[i] == '+' || s[i] == '-')
 		if (s[i++] == '-')
 			n *= -1;
 	r = 0;

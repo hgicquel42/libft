@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 17:26:32 by hgicquel          #+#    #+#             */
-/*   Updated: 2021/11/24 11:01:09 by hgicquel         ###   ########.fr       */
+/*   Updated: 2021/11/24 12:06:08 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,6 @@ char	*ft_strjoin(char *a, char *b);
 
 char	*ft_strtrim(char *s, char *set);
 
-char	**ft_split(char *str, char *charset);
+char	**ft_split(char *s, char c);
 
 #endif

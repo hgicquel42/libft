@@ -5,105 +5,94 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/23 17:18:42 by hgicquel          #+#    #+#             */
-/*   Updated: 2021/11/23 17:21:21 by hgicquel         ###   ########.fr       */
+/*   Created: 2021/11/24 11:31:04 by hgicquel          #+#    #+#             */
+/*   Updated: 2021/11/24 12:16:39 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	ft_include(char	*str, int l, char c)
+static int	ft_split_neq(char *s, char c)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (i < l && str[i] != c)
+	while (s[i] && s[i] != c)
 		i++;
-	if (i == l)
-		return (0);
+	return (i);
+}
+
+static	int	ft_split_count(char *s, char c)
+{
+	size_t	j;
+	size_t	l;
+
+	l = 0;
+	while (*s)
+	{
+		while (*s && *s == c)
+			s++;
+		j = 0;
+		while (s[j] && s[j] != c)
+			j++;
+		if (j)
+			l++;
+		s += j;
+	}
+	return (l);
+}
+
+char	**ft_split_free(char **r, size_t k)
+{
+	size_t	i;
+
+	i = 0 ;
+	while (i < k)
+		free(r[i++]);
+	free(r);
+	return (0);
+}
+
+int	ft_split_alloc(char *s, char c, char **r, size_t l)
+{
+	size_t	j;
+	size_t	k;
+	char	*w;
+
+	k = 0;
+	while (*s)
+	{
+		while (*s && *s == c)
+			s++;
+		j = 0;
+		while (s[j] && s[j] == c)
+			j++;
+		s += j;
+		if (j)
+			continue ;
+		w = malloc(j);
+		if (!w)
+			return (ft_split_free(r, k));
+		r[k++] = w;
+	}
 	return (1);
 }
 
-static	int	ft_count(char *str, char *charset, int l)
+char	**ft_split(char *s, char c)
 {
-	int	i;
-	int	j;
-	int	s;
+	size_t	i;
+	size_t	j;
+	size_t	l;
+	char	**r;
 
 	i = 0;
-	s = 0;
-	while (str[i])
-	{
-		while (str[i] && ft_include(charset, l, str[i]))
-			i++;
-		j = 0;
-		while (str[i + j] && !ft_include(charset, l, str[i + j]))
-			j++;
-		if (j)
-			s++;
-		i += j;
-	}
-	return (s);
-}
-
-static	void	ft_alloc(char **strs, char *str, char *charset, int l)
-{
-	int	i;
-	int	j;
-	int	s;
-
-	i = 0;
-	s = 0;
-	while (str[i])
-	{
-		while (str[i] && ft_include(charset, l, str[i]))
-			i++;
-		j = 0;
-		while (str[i + j] && !ft_include(charset, l, str[i + j]))
-			j++;
-		if (j)
-			strs[s++] = malloc((j + 1) * sizeof(char));
-		i += j;
-	}
-	strs[s] = 0;
-}
-
-void	ft_fill(char **strs, char *str, char *charset, int l)
-{
-	int	i;
-	int	j;
-	int	s;
-
-	i = 0;
-	s = 0;
-	while (str[i])
-	{
-		while (str[i] && ft_include(charset, l, str[i]))
-			i++;
-		j = 0;
-		while (str[i + j] && !ft_include(charset, l, str[i + j]))
-		{
-			strs[s][j] = str[i + j];
-			j++;
-		}
-		if (j)
-			strs[s++][j] = '\0';
-		i += j;
-	}
-}
-
-char	**ft_split(char *str, char *charset)
-{
-	int		l;
-	int		s;
-	char	**strs;
-
-	l = 0;
-	while (charset[l])
-		l++;
-	s = ft_count(str, charset, l);
-	strs = malloc((s + 1) * sizeof(char *));
-	ft_alloc(strs, str, charset, l);
-	ft_fill(strs, str, charset, l);
-	return (strs);
+	j = 0;
+	l = ft_split_count(s, c);
+	r = malloc(l * sizeof(void *));
+	if (!r)
+		return (0);
+	if (!ft_split_alloc(s, c, r, l))
+		return (0);
+	r[l] = 0;
+	return (r);
 }

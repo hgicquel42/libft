@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 17:26:32 by hgicquel          #+#    #+#             */
-/*   Updated: 2021/11/24 12:06:08 by hgicquel         ###   ########.fr       */
+/*   Updated: 2021/11/24 14:35:44 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
+# include <unistd.h>
+# include <limits.h>
 
 int		ft_isalpha(int c);
 
@@ -70,5 +72,15 @@ char	*ft_strjoin(char *a, char *b);
 char	*ft_strtrim(char *s, char *set);
 
 char	**ft_split(char *s, char c);
+
+char	*ft_itoa(int n);
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
+void	ft_putchar_fd(char c, int fd);
+
+void	ft_putstr_fd(char *s, int fd);
 
 #endif

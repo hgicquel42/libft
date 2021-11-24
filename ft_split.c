@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 11:31:04 by hgicquel          #+#    #+#             */
-/*   Updated: 2021/11/24 13:29:31 by hgicquel         ###   ########.fr       */
+/*   Updated: 2021/11/24 16:06:56 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static	int	ft_split_count(char *s, char c)
 	return (l);
 }
 
-int	ft_split_free(char **r, size_t k)
+static	int	ft_split_free(char **r, size_t k)
 {
 	size_t	i;
 
@@ -43,7 +43,7 @@ int	ft_split_free(char **r, size_t k)
 	return (0);
 }
 
-int	ft_split_alloc(char *s, char c, char **r)
+static	int	ft_split_alloc(char *s, char c, char **r)
 {
 	size_t	j;
 	size_t	k;

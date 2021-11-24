@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 17:26:32 by hgicquel          #+#    #+#             */
-/*   Updated: 2021/11/23 17:13:39 by hgicquel         ###   ########.fr       */
+/*   Updated: 2021/11/24 11:01:09 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,17 @@ char	*ft_strrchr(char *s, int c);
 
 int		ft_strncmp(char *a, char *b, size_t n);
 
-void	ft_bzero(char *p, size_t l);
+void	ft_bzero(void *p, size_t l);
 
-void	*ft_memset(char *b, char c, size_t l);
+void	*ft_memset(void *b, int c, size_t l);
 
-void	*ft_memcpy(char *dst, char *src, size_t l);
+void	*ft_memcpy(void *dst, void *src, size_t l);
 
-void	*ft_memmove(char *dst, char *src, size_t l);
+void	*ft_memmove(void *dst, void *src, size_t l);
 
-void	*ft_memchr(unsigned char *s, int c, size_t n);
+void	*ft_memchr(void *s, int c, size_t n);
 
-int		ft_memcmp(unsigned char *a, unsigned char *b, size_t n);
+int		ft_memcmp(void *a, void *b, size_t n);
 
 size_t	ft_strlcpy(char *dst, char *src, size_t l);
 
@@ -68,5 +68,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char *a, char *b);
 
 char	*ft_strtrim(char *s, char *set);
+
+char	**ft_split(char *str, char *charset);
 
 #endif

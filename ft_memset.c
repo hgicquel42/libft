@@ -1,40 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/23 12:06:53 by hgicquel          #+#    #+#             */
-/*   Updated: 2021/11/23 14:27:16 by hgicquel         ###   ########.fr       */
+/*   Created: 2021/11/22 17:36:55 by hgicquel          #+#    #+#             */
+/*   Updated: 2021/11/24 11:02:47 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	void	*ft_unsafe_memcpy1(char *dst, char *src, size_t l)
-{
-	size_t	i;
-
-	i = -1;
-	while (++i < l)
-		dst[i] = src[i];
-	return (dst);
-}
-
-static	void	*ft_unsafe_memcpy2(char *dst, char *src, size_t l)
+static	void	*ft_memset2(unsigned char *p, unsigned char c, size_t l)
 {
 	while (l--)
-		dst[l] = src[l];
-	return (dst);
+		p[l] = c;
+	return (p);
 }
 
-void	*ft_memmove(char *dst, char *src, size_t l)
+void	*ft_memset(void *p, int c, size_t l)
 {
-	if (!dst && !src)
-		return (0);
-	if (dst > src)
-		return (ft_unsafe_memcpy2(dst, src, l));
-	else
-		return (ft_unsafe_memcpy1(dst, src, l));
+	return (ft_memset2(p, c, l));
 }

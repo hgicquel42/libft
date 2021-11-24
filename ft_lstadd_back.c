@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 15:00:19 by hgicquel          #+#    #+#             */
-/*   Updated: 2021/11/24 15:03:40 by hgicquel         ###   ########.fr       */
+/*   Updated: 2021/11/24 15:57:09 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstadd_back(t_list **alst, t_list *new)
 {
+	if (!alst)
+		return ;
 	if (!*alst)
 		*alst = new;
 	else

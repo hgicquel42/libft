@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:50:29 by hgicquel          #+#    #+#             */
-/*   Updated: 2021/11/24 14:52:09 by hgicquel         ###   ########.fr       */
+/*   Updated: 2021/11/24 15:52:18 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,6 @@ t_list	*ft_lstnew(void *content)
 	if (!l)
 		return (0);
 	l->content = content;
+	l->next = 0;
 	return (l);
 }
